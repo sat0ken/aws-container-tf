@@ -1,0 +1,30 @@
+[
+  {
+    "name": "${container_name}",
+    "image": "${image_name}",
+    "cpu": 0,
+    "memory": 256,
+    "memoryReservation": 128,
+    "portMappings": [
+      {
+        "containerPort": ${container_port},
+        "hostPort": ${container_port},
+        "protocol": "tcp"
+      }
+    ],
+    "essential": true,
+    "environment": ${container_env},
+    "secrets": ${container_secret},
+    "logConfiguration": {
+      "logDriver": "awslogs",
+      "options": {
+        "awslogs-create-group": "true",
+        "awslogs-group": "/ecs/task/${container_name}",
+        "awslogs-region": "${region}",
+        "awslogs-stream-prefix": "ecs"
+      }
+    },
+    "startTimeout": 10,
+    "stopTimeout": 30
+  }
+]

@@ -17,10 +17,8 @@ module "ecr" {
 }
 
 # module "ecs_cluster" {
-
-# }
-
-# module "ecs_service" {
+#   source       = "./modules/ecs"
+#   cluster_name = "mycluster"
 
 # }
 

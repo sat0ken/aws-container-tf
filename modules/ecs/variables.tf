@@ -1,0 +1,11 @@
+variable "region" {}
+variable "tags" {}
+variable "cluster_name" {}
+variable "container_name" {}
+variable "container_image" {}
+variable "container_port" {}
+variable "container_env" {}
+variable "container_secrets" {}
+variable "execution_role_arn" {}
+variable "ecs_cluster_id" {}
+variable "private_subnets" {}
