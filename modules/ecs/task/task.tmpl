@@ -1,0 +1,12 @@
+{
+    name      = "${name}"
+    image     = "${image}"
+    cpu       = 10
+    memory    = 512
+    essential = true
+    portMappings = [
+      {
+         containerPort = "${port}"
+      }
+    ]
+}
