@@ -19,6 +19,8 @@ module "ecr" {
 # module "ecs_cluster" {
 #   source       = "./modules/ecs"
 #   cluster_name = "mycluster"
+#   region = local.region
+#   tags = local.tags
 
 # }
 
